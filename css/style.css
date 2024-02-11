@@ -1,0 +1,305 @@
+:root {
+    --bg: #010101;
+    --nav: #b6895b;
+}
+
+* {
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.4rem 7%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+.navbar .logo span {
+    color: var(--nav);
+}
+
+.navbar .navbar-menu a{
+    color: #fff;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-menu a:hover {
+    color: #b6895b;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .icons a {
+    color: #fff;
+    margin: 0 5px;
+}
+
+.navbar .icons a:hover {
+    color: var(--nav);
+    transition: all 0.3s ease;
+}
+
+.navbar .navbar-menu a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--nav);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-menu a:hover::after {
+    transform: scaleX(0.5);
+} 
+
+#hamburger-menu {
+    display: none;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../img/coffe.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 3%, rgba(255, 255, 255, 0) 20%);
+}
+
+
+.hero .content {
+    padding: 1.2rem 7%;
+    max-width: 40rem;
+}
+
+.hero .content h1 {
+    font-size: 3em;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+}
+
+.hero .content h1 span {
+    color: var(--nav);
+}
+ 
+.hero .content p {
+    font-size: 1rem;
+    margin-top: -1.8rem;
+    line-height: 1.2;
+    font-weight: 100;
+    mix-blend-mode: difference;
+}
+
+/* about css */
+.about {
+    padding: 4rem 9% 1.4rem;
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.about h2 span {
+    color: var(--nav);
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+    width: 100%;
+}
+
+.about .row .content {
+    padding-left: 2rem;
+    padding-top: -5rem;
+}
+
+.about .row .content h2 {
+    font-size: 1.6rem;
+    padding-top: -4rem;
+}
+
+.about .row .content p {
+    margin-bottom: 0.8rem;
+}
+/* about css end */
+
+/* menu css */
+.menu-spesial {
+    padding: 4rem 9% 1.4rem;
+}
+
+.menu-spesial .row .content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.menu-spesial h2 {
+     color: #fff;
+     text-align: center;
+     font-size: 2rem;
+}
+
+.menu-spesial h2 span {
+    color: var(--nav);
+}
+
+.about .content h3 {
+    font-size: 2rem;
+}
+
+.about .content h3 span {
+    color: var(--nav);
+}
+
+.menu-spesial .deskripsi {
+    max-width: 30rem;
+    margin-bottom: 2rem;
+}
+
+.menu-spesial .row .content .card .menu-img img {
+    width: 200px;
+    border-radius: 100%;
+}
+
+.menu-spesial .row .content .card .img-judul {
+    text-align: center;
+} 
+/* menu css end */
+
+/* tempat css start */
+.tempat {
+    padding: 4rem 9% 1.4rem;
+}
+
+.tempat h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.tempat h2 span {
+    color: var(--nav);
+}
+
+.tempat .card .row .content {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   justify-content: center;
+} 
+
+.tempat .card .row .content .map iframe {
+    justify-content: center;
+    width: 100%;
+    height: 300%;
+    object-fit: cover;
+}
+/* tempat css end */
+/* media query navbar */
+@media (max-width: 1366px) {
+   html {
+    font-size: 75%;
+   }
+   .navbar .logo {
+      font-size: 2.5rem;
+   }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 67.5%;
+    }
+
+    .about .row {
+        flex-wrap: wrap; /*mengatur posisi column*/
+    }
+
+}
+/* mobile phone  */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+@media (max-width: 498px) {
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-menu {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--nav);
+        width: 30rem;
+        height: 100vh;
+    }
+
+    .navbar .navbar-menu.active {
+        right: 0;
+    }
+
+    .navbar .navbar-menu a {
+        color: #fff;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-menu a:hover {
+        color: var(--bg);
+    }
+}
+
+@media (max-width: 365px) {
+    .hero .content h1 {
+        font-size: 1.9rem;
+    }
+}
+/* media query navbar end */
+
